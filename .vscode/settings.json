@@ -1,0 +1,6 @@
+{
+  "python.pythonPath": "/Users/andrew/.local/share/virtualenvs/jenny_erlanger-QQHyIQ3d/bin/python",
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+}

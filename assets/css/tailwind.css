@@ -1,0 +1,16 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+html {
+  font-family: 'Quattrocento Sans', sans-serif;
+  color: #333333;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Quattrocento', serif;
+}
