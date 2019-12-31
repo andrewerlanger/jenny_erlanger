@@ -1,8 +1,53 @@
-<nav class="w-screen flex items-center justify-between flex-wrap p-6 absolute text-white z-10">
-  <a href="{% url 'home' %}" class="hover:opacity-75"><h3 class="text-2xl tracking-wider">Jenny<strong>Erlanger</strong></h3></a>
-  <div class="font-light text-lg tracking-wider flex">
-    <h3><a href="{% url 'poems' %}" class="hover:opacity-75">Poems</a></h3>
-    <h3><a href="{% url 'about' %}" class="ml-4 md:ml-6 hover:opacity-75">About</a></h3>
-    <h3><a href="{% url 'contact' %}" class="ml-4 md:ml-6 hover:opacity-75">Contact</a></h3>
-  </div>
-</nav>
+{% if request.get_full_path == "/" %}
+  <nav class="w-screen flex items-center justify-between flex-wrap p-6 absolute text-white z-10">
+    
+    {% comment %} LOGO {% endcomment %}
+    <a href="{% url 'home' %}" class="hover:opacity-75"><h3 class="text-2xl tracking-wider">Jenny<strong>Erlanger</strong></h3></a>
+    
+    {% comment %} BURGER ICON {% endcomment %}
+    <div id="burger" class="block md:hidden">
+      <button class="flex items-center px-3 py-2 border rounded text-white border-white hover:opacity-75">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      </button>
+    </div>
+    
+    {% comment %} MENU OPTIONS {% endcomment %}
+    <div id="navbar-options" class="flex flex-col md:flex md:flex-row w-full md:w-auto hidden">
+      <h3 class="text-lg mt-4 md:mt-0"><a href="{% url 'poems' %}" class="md:inline-block md:mt-0 hover:opacity-75 md:mr-6">
+        Poems
+      </a></h3>
+      <h3 class="text-lg mt-3 md:mt-0"><a href="{% url 'about' %}" class="md:inline-block md:mt-0 hover:opacity-75 md:mr-6">
+        About
+      </a></h3>
+      <h3 class="text-lg mt-3 md:mt-0"><a href="{% url 'contact' %}" class="md:inline-block md:mt-0 hover:opacity-75">
+        Contact
+      </a></h3>
+    </div>
+  </nav>
+{% else %}
+  <nav class="w-screen flex items-center justify-between absolute top-0 flex-wrap p-6 shadow-md z-10">
+    
+    {% comment %} LOGO {% endcomment %}
+    <a href="{% url 'home' %}" class="hover:opacity-75"><h3 class="text-2xl tracking-wider">Jenny<strong>Erlanger</strong></h3></a>
+    
+    {% comment %} BURGER ICON {% endcomment %}
+    <div id="burger" class="block md:hidden">
+      <button class="flex items-center px-3 py-2 border rounded hover:opacity-75">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      </button>
+    </div>
+    
+    {% comment %} MENU OPTIONS {% endcomment %}
+    <div id="navbar-options" class="flex flex-col md:flex md:flex-row w-full md:w-auto hidden">
+      <h3 class="text-lg mt-4 md:mt-0"><a href="{% url 'poems' %}" class="md:inline-block md:mt-0 hover:opacity-75 md:mr-6">
+        Poems
+      </a></h3>
+      <h3 class="text-lg mt-3 md:mt-0"><a href="{% url 'about' %}" class="md:inline-block md:mt-0 hover:opacity-75 md:mr-6">
+        About
+      </a></h3>
+      <h3 class="text-lg mt-3 md:mt-0"><a href="{% url 'contact' %}" class="md:inline-block md:mt-0 hover:opacity-75">
+        Contact
+      </a></h3>
+    </div>
+  </nav>
+{% endif %}

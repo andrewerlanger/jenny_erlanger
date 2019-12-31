@@ -14,3 +14,11 @@ h2,
 h3 {
   font-family: 'Quattrocento', serif;
 }
+
+.fix-height {
+  min-height: calc(100vh - 148px);
+}
+
+.navbar-margin {
+  margin-top: 84px;
+}

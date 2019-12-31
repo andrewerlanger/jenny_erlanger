@@ -1,1 +1,8 @@
-Footer
+<div class="bg-gray-100 w-full h-8 p-8 flex items-center justify-between">
+  <p>&copy; Jenny Erlanger {% now "Y" %}</p>
+  <div class="hidden md:flex">
+    <a href="{% url 'poems' %}" class="tracking-widest hover:opacity-75">Poems</a>
+    <a href="{% url 'about' %}" class="tracking-widest ml-4 md:ml-6 hover:opacity-75">About</a>
+    <a href="{% url 'contact' %}" class="tracking-widest ml-4 md:ml-6 hover:opacity-75">Contact</a>
+  </div>
+</div>

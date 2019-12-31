@@ -13692,6 +13692,18 @@ h3 {
   font-family: 'Quattrocento', serif;
 }
 
+.fix-height {
+  min-height: calc(100vh - 148px);
+}
+
+.navbar-margin {
+  margin-top: 84px;
+}
+
+.w-card {
+  width: calc(33% - 2rem);
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;

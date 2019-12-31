@@ -18,10 +18,14 @@
 <body>
   {% include "partials/_navbar.html" %}
   
-  {% block content %}
-  {% endblock content %}
+  <div class="fix-height">
+    {% block content %}
+    {% endblock content %}
+  </div>
 
   {% include 'partials/_footer.html' %}
+
+  <script defer src="{% static 'js/navbar.js' %}"></script>
 </body>
 
 </html>

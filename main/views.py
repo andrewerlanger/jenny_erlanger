@@ -14,7 +14,7 @@ class HomeView(View):
     template_name = "pages/home.html"
 
     def get(self, request):
-        featured_poems = Poem.objects.featured()
+        featured_poems = Poem.objects.featured()[:3]
         return render(request, self.template_name, {"featured_poems": featured_poems})
 
 
