@@ -6,7 +6,10 @@
   "dependencies": {
     "tailwindcss": "^1.1.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.3.0",
+    "postcss": "^7.0.26"
+  },
   "scripts": {
     "build:css": "tailwind build assets/css/tailwind.css -o assets/css/style.css"
   },
