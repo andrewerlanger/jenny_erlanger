@@ -1,0 +1,1 @@
+web: gunicorn jenny_erlanger.wsgi --log-file -
