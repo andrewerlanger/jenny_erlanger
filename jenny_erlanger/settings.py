@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import django_heroku
 from cloudinary import config as cloudinary_config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -129,10 +130,12 @@ STATICFILES_DIRS = (
 # Reduce the size of the static files when they are served (this is more efficient).
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
 # Image upload
 cloudinary_config(
     cloud_name=os.environ.get('CLOUDINARY_NAME'),
     api_key=os.environ.get('CLOUDINARY_API'),
     api_secret=os.environ.get('CLOUDINARY_SECRET')
 )
+
+# Heroku DB
+django_heroku.settings(locals())
