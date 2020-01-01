@@ -1,3 +1,5 @@
+{% load template_tags %}
+
 {% if request.get_full_path == "/" %}
   <nav class="w-screen flex items-center justify-between flex-wrap p-6 absolute text-white z-10">
     
@@ -25,7 +27,7 @@
     </div>
   </nav>
 {% else %}
-  <nav class="w-screen flex items-center justify-between absolute top-0 flex-wrap p-6 shadow-md z-10">
+  <nav class="w-screen bg-white flex items-center justify-between absolute top-0 flex-wrap p-6 shadow-md z-10">
     
     {% comment %} LOGO {% endcomment %}
     <a href="{% url 'home' %}" class="hover:opacity-75"><h3 class="text-2xl tracking-wider">Jenny<strong>Erlanger</strong></h3></a>
@@ -39,13 +41,13 @@
     
     {% comment %} MENU OPTIONS {% endcomment %}
     <div id="navbar-options" class="flex flex-col md:flex md:flex-row w-full md:w-auto hidden">
-      <h3 class="text-lg mt-4 md:mt-0"><a href="{% url 'poems' %}" class="md:inline-block md:mt-0 hover:opacity-75 md:mr-6">
+      <h3 class="text-lg mt-4 md:mt-0"><a href="{% url 'poems' %}" class="md:inline-block md:mt-0 hover:opacity-75 md:mr-6 {{ request.get_full_path|color_navbar_links:'poems' }}">
         Poems
       </a></h3>
-      <h3 class="text-lg mt-3 md:mt-0"><a href="{% url 'about' %}" class="md:inline-block md:mt-0 hover:opacity-75 md:mr-6">
+      <h3 class="text-lg mt-3 md:mt-0"><a href="{% url 'about' %}" class="md:inline-block md:mt-0 hover:opacity-75 md:mr-6 {{ request.get_full_path|color_navbar_links:'about' }}">
         About
       </a></h3>
-      <h3 class="text-lg mt-3 md:mt-0"><a href="{% url 'contact' %}" class="md:inline-block md:mt-0 hover:opacity-75">
+      <h3 class="text-lg mt-3 md:mt-0"><a href="{% url 'contact' %}" class="md:inline-block md:mt-0 hover:opacity-75 {{ request.get_full_path|color_navbar_links:'contact' }}">
         Contact
       </a></h3>
     </div>

@@ -1,5 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>About</h1>
+  
+  <div class="container navbar-margin px-6 mx-auto pb-16">
+    <div class="pt-10 w-full xl:w-3/4 mx-auto mb-8 text-center md:text-left">
+      <h1 class="text-indigo-600 uppercase pb-4 font-bold tracking-wider">About Me</h1>
+      <p>My journey through poetry.</p>
+    </div>
+
+    <hr class="w-full xl:w-3/4 mx-auto">
+
+    <div class="w-full xl:w-3/4 mx-auto mt-10 flex flex-col-reverse md:flex-row">
+      <div class="md:w-3/5 md:mr-10 mb-4 md:mb-0">
+        <p class="mb-4">Having retired from the teaching profession after thirty years of instructing middle school students in French, Mathematics and English, I've now found extra time to devote to my life-long passion of poetry writing.</p>
+        <p class="mb-4">Since early childhood when I was introduced to A.A Milne’ poetry, I have always been drawn to rhyming and rhythmic verse – and I still gravitate towards this genre in my own writing. A prolific poet during my primary school years, I have continued to find poetry an excellent medium for recording the observations, particular moments and feelings experienced in the course of our everyday lives.</p>
+        <p class="mb-4">Although I have written poems on a diverse range of themes, the bulk of my creative energy finds an outlet in the hundreds of poems I have written through the eyes of a child. Given that childhood is such a short and precious phase in the human life cycle, I feel drawn to immortalising the ups and downs of being a child in a way that can be easily and fondly remembered.</p>
+      </div>
+      <div class="mb-6 md:mb-0 w-full h-64 md:h-auto md:w-2/5 mx-auto md:mx-0 md:pl-4 bg-cover bg-center rounded shadow-lg" style="background-image: url('https://res.cloudinary.com/dkft9hkkv/image/upload/v1545510748/Erlanger%20Poetry/Kiss.jpg')">
+      </div>
+    </div>
+  </div>
+
 {% endblock content %}
+
+{% comment %} <img class="object-cover object-center rounded shadow-lg" src="https://res.cloudinary.com/dkft9hkkv/image/upload/v1545510748/Erlanger%20Poetry/Kiss.jpg" alt="Jenny Erlanger | Australian Children's Poet"> {% endcomment %}
