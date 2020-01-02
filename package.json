@@ -4,11 +4,23 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "autoprefixer": "^9.7.3",
     "tailwindcss": "^1.1.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^3.4.0",
+    "glob-all": "^3.1.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "purgecss-webpack-plugin": "^1.6.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-node-externals": "^1.7.2"
+  },
   "scripts": {
+    "webpack:dev": "webpack --mode development",
+    "webpack:prod": "webpack --mode production",
     "build:css": "tailwind build assets/css/tailwind.css -o assets/css/style.css"
   },
   "keywords": [],

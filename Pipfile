@@ -13,6 +13,7 @@ django = "*"
 whitenoise = "*"
 gunicorn = "*"
 django-heroku = "*"
+django-webpack-loader = "*"
 
 [requires]
 python_version = "3.7"

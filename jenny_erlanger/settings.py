@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'webpack_loader',
     'cloudinary',
     'main.apps.MainConfig',
 ]
@@ -124,7 +125,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 STATICFILES_DIRS = (
-    (os.path.join(BASE_DIR, 'assets')),
+    (os.path.join(BASE_DIR, 'assets/static')),
 )
 
 # Reduce the size of the static files when they are served (this is more efficient).
@@ -136,6 +137,18 @@ cloudinary_config(
     api_key=os.environ.get('CLOUDINARY_API'),
     api_secret=os.environ.get('CLOUDINARY_SECRET')
 )
+
+# Webpack
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': not DEBUG,
+        'BUNDLE_DIR_NAME': 'assets/static/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+        'POLL_INTERVAL': 0.1,
+        'TIMEOUT': None,
+        'IGNORE': ['.+\.hot-update.js', '.+\.map']
+    }
+}
 
 # Heroku DB
 django_heroku.settings(locals())

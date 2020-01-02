@@ -13,5 +13,5 @@ var navbarManager = {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  this.navbarManager.init();
+  navbarManager.init();
 })
