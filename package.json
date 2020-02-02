@@ -21,7 +21,7 @@
   "scripts": {
     "webpack:dev": "webpack --mode development",
     "webpack:prod": "webpack --mode production",
-    "build:css": "tailwind build assets/css/tailwind.css -o assets/css/style.css"
+    "build:css": "tailwind build assets/css/tailwind.css -o assets/static/main.css"
   },
   "keywords": [],
   "author": "",

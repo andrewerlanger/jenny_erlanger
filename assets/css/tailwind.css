@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 html {
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: "Quattrocento Sans", sans-serif;
   color: #333333;
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'Quattrocento', serif;
+  font-family: "Quattrocento", serif;
 }
 
 .fix-height {
@@ -19,4 +19,8 @@ h3 {
 
 .navbar-margin {
   margin-top: 84px;
+}
+
+.shadow-2xl {
+  box-shadow: 0 12px 50px -12px rgba(0, 0, 0, 0.25);
 }
