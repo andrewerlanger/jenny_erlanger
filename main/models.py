@@ -15,7 +15,6 @@ class Poem(models.Model):
     body = models.TextField()
     image = CloudinaryField("image")
     category = models.CharField(max_length=255, blank=True)
-    publishing_date = models.DateField()
     featured = models.BooleanField()
 
     # Custom model manager
